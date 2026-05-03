@@ -1,16 +1,21 @@
 @import "tailwindcss";
+@config "../tailwind.config.ts";
 
 :root {
   --background: #f8fafc;
-  --foreground: #0f172a;
+  --foreground: #003e6c;
 }
 
 @theme {
+  /* Brand colours — Tailwind v4 native */
+  --color-primary:           #003e6c;
+  --color-primary-foreground: #ffffff;
+  --color-accent:            #ff9100;
+  --color-accent-foreground: #ffffff;
+
+  /* Fonts */
   --font-heading: var(--font-playfair);
   --font-body: var(--font-dm-sans);
-  --color-primary: #0f172a;
-  --color-accent: #14b8a6;
-  --color-highlight: #f59e0b;
 }
 
 body {
@@ -18,15 +23,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-dm-sans), sans-serif;
 }
-/* Hide all scrollbars globally */
-* {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-}
 
-*::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-}
 /* Gradient animation for hero */
 @keyframes gradient {
   0%   { background-position: 0% 50%; }
@@ -39,55 +36,60 @@ body {
   animation: gradient 15s ease infinite;
 }
 
-/* Fade-up entrance animation */
+/* Fade-up entrance */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-up {
-  animation: fadeUp 0.5s ease-out both;
-}
+.animate-fade-up { animation: fadeUp 0.5s ease-out both; }
 
-/* Stagger helpers */
+/* Stagger delays */
 .animation-delay-100 { animation-delay: 100ms; }
 .animation-delay-200 { animation-delay: 200ms; }
 .animation-delay-300 { animation-delay: 300ms; }
 .animation-delay-400 { animation-delay: 400ms; }
 .animation-delay-500 { animation-delay: 500ms; }
 
-/* Pulse glow for accent elements */
+/* Marquee scroll */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+
+/* Pulse glow */
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.15); }
-  50%       { box-shadow: 0 0 0 8px rgba(20, 184, 166, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,145,0,0.15); }
+  50%       { box-shadow: 0 0 0 10px rgba(255,145,0,0); }
 }
+.animate-pulse-glow { animation: pulseGlow 2.5s ease-in-out infinite; }
 
-.animate-pulse-glow {
-  animation: pulseGlow 2.5s ease-in-out infinite;
-}
-
-/* Custom scrollbar for the rest of the site */
+/* Custom scrollbar (non-chat pages) */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: #f1f5f9; }
 ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
-/* Prose overrides for chat markdown */
-.prose h1, .prose h2, .prose h3 { color: #0f172a; font-family: var(--font-playfair), serif; }
-.prose strong { color: #0f172a; }
-.prose code { background: #f1f5f9; border-radius: 4px; padding: 2px 5px; font-size: 0.85em; }
-.prose pre { background: #1e293b; border-radius: 12px; }
-.prose a { color: #14b8a6; }
-.prose ul li::marker { color: #14b8a6; }
-
-/* Glass card utility */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Hide scrollbar but keep scroll functionality */
+/* Hide scrollbar utility */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Prose overrides for chat */
+.prose h1,.prose h2,.prose h3 { color: #003e6c; font-family: var(--font-playfair), serif; }
+.prose strong { color: #003e6c; }
+.prose code { background: #f1f5f9; border-radius: 4px; padding: 2px 5px; font-size: 0.85em; }
+.prose pre  { background: #1e293b; border-radius: 12px; }
+.prose a    { color: #ff9100; }
+.prose ul li::marker { color: #ff9100; }
+
+/* Glass utility */
+.glass {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+}

@@ -48,7 +48,7 @@ function getTextContent(message: UIMessage): string {
 
 function AssistantAvatar() {
   return (
-    <div className="shrink-0 h-9 w-9 rounded-xl bg-gradient-to-br from-accent to-teal-600 flex items-center justify-center shadow-md shadow-accent/20 mt-0.5">
+    <div className="shrink-0 h-9 w-9 rounded-xl bg-gradient-to-br from-accent to-orange-600 flex items-center justify-center shadow-md shadow-accent/20 mt-0.5">
       <Bot className="h-4 w-4 text-white" />
     </div>
   );
@@ -341,7 +341,7 @@ function ChatContent() {
             {/* Icon */}
             <div className="relative mb-5">
               <div className="absolute inset-0 bg-accent/10 blur-2xl rounded-full scale-[2] opacity-50" />
-              <div className="relative h-16 w-16 rounded-2xl bg-gradient-to-br from-accent to-teal-600 flex items-center justify-center shadow-xl shadow-accent/20">
+              <div className="relative h-16 w-16 rounded-2xl bg-gradient-to-br from-accent to-orange-600 flex items-center justify-center shadow-xl shadow-accent/20">
                 <Compass className="h-8 w-8 text-white" />
               </div>
             </div>

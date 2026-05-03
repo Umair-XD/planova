@@ -18,14 +18,14 @@ const Button = ({
   className = "",
   ...props
 }: ButtonProps) => {
-  const baseStyles =
+  const base =
     "inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200 rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98]";
 
   const variants = {
     primary:
-      "bg-accent text-white hover:bg-teal-600 shadow-sm hover:shadow-md",
+      "bg-accent text-white hover:bg-orange-600 shadow-sm hover:shadow-md",
     secondary:
-      "bg-highlight text-black hover:bg-amber-500 shadow-sm hover:shadow-md",
+      "bg-primary text-white hover:bg-[#004f8a] shadow-sm hover:shadow-md",
     outline:
       "border-2 border-accent text-accent hover:bg-accent hover:text-white",
     ghost:
@@ -42,7 +42,7 @@ const Button = ({
 
   return (
     <button
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+      className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
       disabled={isLoading || props.disabled}
       {...props}
     >

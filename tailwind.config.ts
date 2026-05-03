@@ -9,21 +9,17 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0F172A",
+          DEFAULT: "#003e6c",
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#14B8A6",
+          DEFAULT: "#ff9100",
           foreground: "#FFFFFF",
         },
         highlight: {
-          DEFAULT: "#F59E0B",
-          foreground: "#000000",
+          DEFAULT: "#ff9100",
+          foreground: "#FFFFFF",
         },
-        slate: {
-          50: "#F8FAFC",
-          200: "#E2E8F0",
-        }
       },
       fontFamily: {
         heading: ["var(--font-playfair)", "serif"],

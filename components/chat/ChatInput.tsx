@@ -198,7 +198,7 @@ const ChatInput = memo(
                 type="button"
                 onClick={submitMessage}
                 disabled={!canSend}
-                className="h-10 w-10 shrink-0 rounded-xl flex items-center justify-center transition-all shadow-sm disabled:opacity-40 disabled:bg-slate-100 disabled:text-slate-400 bg-accent text-white hover:bg-teal-600 active:scale-95"
+                className="h-10 w-10 shrink-0 rounded-xl flex items-center justify-center transition-all shadow-sm disabled:opacity-40 disabled:bg-slate-100 disabled:text-slate-400 bg-accent text-white hover:bg-orange-600 active:scale-95"
                 title="Send (Enter)"
               >
                 <Send className="h-4 w-4" />

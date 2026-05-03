@@ -6,11 +6,11 @@ import EmptyState from "@/components/ui/EmptyState";
 import { Plane, Calendar, Wallet, ArrowRight } from "lucide-react";
 
 const DESTINATION_GRADIENTS = [
-  "from-teal-500 to-cyan-600",
-  "from-violet-500 to-purple-600",
+  "from-[#003e6c] to-[#004f8a]",
+  "from-violet-600 to-purple-700",
   "from-rose-500 to-pink-600",
-  "from-amber-500 to-orange-600",
-  "from-blue-500 to-indigo-600",
+  "from-accent to-orange-600",
+  "from-blue-600 to-indigo-700",
   "from-emerald-500 to-green-600",
 ];
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
+import ConditionalNavbar from "@/components/layout/ConditionalNavbar";
 import ConditionalFooter from "@/components/layout/ConditionalFooter";
 import { Toaster } from "react-hot-toast";
 import Providers from "./providers";
@@ -33,7 +33,7 @@ export default function RootLayout({
         className={`${playfair.variable} ${dmSans.variable} font-body bg-slate-50 text-slate-900 antialiased`}
       >
         <Providers>
-          <Navbar />
+          <ConditionalNavbar />
           <main className="min-h-screen">{children}</main>
           <ConditionalFooter />
           <Toaster position="top-right" />

@@ -6,7 +6,7 @@ const QuickActions = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
       {/* Plan new trip */}
       <Link href="/chat" className="group block">
-        <div className="relative overflow-hidden bg-gradient-to-br from-accent to-teal-600 text-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div className="relative overflow-hidden bg-gradient-to-br from-accent to-orange-600 text-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
           <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-white/10 rounded-full" />
           <div className="absolute -right-2 -top-6 w-16 h-16 bg-white/5 rounded-full" />
           <div className="relative flex items-center gap-4">
@@ -15,7 +15,7 @@ const QuickActions = () => {
             </div>
             <div>
               <p className="text-lg font-bold">Plan New Trip</p>
-              <p className="text-xs text-teal-100 mt-0.5">Chat with AI assistant</p>
+              <p className="text-xs text-orange-100 mt-0.5">Chat with AI assistant</p>
             </div>
           </div>
         </div>
