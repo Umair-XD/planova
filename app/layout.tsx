@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import ConditionalFooter from "@/components/layout/ConditionalFooter";
 import { Toaster } from "react-hot-toast";
 import Providers from "./providers";
 
@@ -35,7 +35,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           <main className="min-h-screen">{children}</main>
-          <Footer />
+          <ConditionalFooter />
           <Toaster position="top-right" />
         </Providers>
       </body>
